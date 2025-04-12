@@ -1,3 +1,4 @@
+`include "parity.v"
 module parity_tb;
 reg a,b,c;
 wire odd,even;
