@@ -1,8 +1,8 @@
 module mux2(
 	input i0,i1,s,
 	output y);
-bufif0 (y,i0,s);
-bufif1 (y,ii,s);
+bufif0 b1 (y,i0,s);
+bufif1 b2 (y,i1,s);
 endmodule
 
 
@@ -11,7 +11,7 @@ module mux2_tb;
 reg i0,i1,s;
 wire y;
 
-mux2 dut (.*);
+mux2 dut (i0,i1,s,y);
 
 initial begin 
 i0=0; i1=0 ; s=0;
