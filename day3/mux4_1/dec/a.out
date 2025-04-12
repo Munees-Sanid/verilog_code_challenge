@@ -1,0 +1,85 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5b0f5a4c56c0 .scope module, "test" "test" 2 11;
+ .timescale 0 0;
+v0x5b0f5a4dc8b0_0 .var "i", 1 0;
+v0x5b0f5a4dc970_0 .net "y", 3 0, L_0x5b0f5a4dd550;  1 drivers
+S_0x5b0f5a4c5850 .scope module, "dut" "dec" 2 14, 2 1 0, S_0x5b0f5a4c56c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "i";
+    .port_info 1 /OUTPUT 4 "y";
+L_0x5b0f5a4dcb10 .functor NOT 1, L_0x5b0f5a4dca40, C4<0>, C4<0>, C4<0>;
+L_0x5b0f5a4dcc70 .functor NOT 1, L_0x5b0f5a4dcbd0, C4<0>, C4<0>, C4<0>;
+L_0x5b0f5a4dcd60 .functor AND 1, L_0x5b0f5a4dcb10, L_0x5b0f5a4dcc70, C4<1>, C4<1>;
+L_0x5b0f5a4dcf10 .functor NOT 1, L_0x5b0f5a4dce70, C4<0>, C4<0>, C4<0>;
+L_0x5b0f5a4dd080 .functor AND 1, L_0x5b0f5a4dcf10, L_0x5b0f5a4dcfb0, C4<1>, C4<1>;
+L_0x5b0f5a4dd340 .functor NOT 1, L_0x5b0f5a4dd260, C4<0>, C4<0>, C4<0>;
+L_0x5b0f5a4dd440 .functor AND 1, L_0x5b0f5a4dd1c0, L_0x5b0f5a4dd340, C4<1>, C4<1>;
+L_0x5b0f5a4dd9d0 .functor AND 1, L_0x5b0f5a4dd730, L_0x5b0f5a4dd930, C4<1>, C4<1>;
+v0x5b0f5a4b4240_0 .net *"_ivl_10", 0 0, L_0x5b0f5a4dcd60;  1 drivers
+v0x5b0f5a4db940_0 .net *"_ivl_15", 0 0, L_0x5b0f5a4dce70;  1 drivers
+v0x5b0f5a4dba20_0 .net *"_ivl_16", 0 0, L_0x5b0f5a4dcf10;  1 drivers
+v0x5b0f5a4dbae0_0 .net *"_ivl_19", 0 0, L_0x5b0f5a4dcfb0;  1 drivers
+v0x5b0f5a4dbbc0_0 .net *"_ivl_20", 0 0, L_0x5b0f5a4dd080;  1 drivers
+v0x5b0f5a4dbcf0_0 .net *"_ivl_25", 0 0, L_0x5b0f5a4dd1c0;  1 drivers
+v0x5b0f5a4dbdd0_0 .net *"_ivl_27", 0 0, L_0x5b0f5a4dd260;  1 drivers
+v0x5b0f5a4dbeb0_0 .net *"_ivl_28", 0 0, L_0x5b0f5a4dd340;  1 drivers
+v0x5b0f5a4dbf90_0 .net *"_ivl_3", 0 0, L_0x5b0f5a4dca40;  1 drivers
+v0x5b0f5a4dc070_0 .net *"_ivl_30", 0 0, L_0x5b0f5a4dd440;  1 drivers
+v0x5b0f5a4dc150_0 .net *"_ivl_36", 0 0, L_0x5b0f5a4dd730;  1 drivers
+v0x5b0f5a4dc230_0 .net *"_ivl_38", 0 0, L_0x5b0f5a4dd930;  1 drivers
+v0x5b0f5a4dc310_0 .net *"_ivl_39", 0 0, L_0x5b0f5a4dd9d0;  1 drivers
+v0x5b0f5a4dc3f0_0 .net *"_ivl_4", 0 0, L_0x5b0f5a4dcb10;  1 drivers
+v0x5b0f5a4dc4d0_0 .net *"_ivl_7", 0 0, L_0x5b0f5a4dcbd0;  1 drivers
+v0x5b0f5a4dc5b0_0 .net *"_ivl_8", 0 0, L_0x5b0f5a4dcc70;  1 drivers
+v0x5b0f5a4dc690_0 .net "i", 1 0, v0x5b0f5a4dc8b0_0;  1 drivers
+v0x5b0f5a4dc770_0 .net "y", 3 0, L_0x5b0f5a4dd550;  alias, 1 drivers
+L_0x5b0f5a4dca40 .part v0x5b0f5a4dc8b0_0, 1, 1;
+L_0x5b0f5a4dcbd0 .part v0x5b0f5a4dc8b0_0, 0, 1;
+L_0x5b0f5a4dce70 .part v0x5b0f5a4dc8b0_0, 1, 1;
+L_0x5b0f5a4dcfb0 .part v0x5b0f5a4dc8b0_0, 0, 1;
+L_0x5b0f5a4dd1c0 .part v0x5b0f5a4dc8b0_0, 1, 1;
+L_0x5b0f5a4dd260 .part v0x5b0f5a4dc8b0_0, 0, 1;
+L_0x5b0f5a4dd550 .concat8 [ 1 1 1 1], L_0x5b0f5a4dd9d0, L_0x5b0f5a4dd440, L_0x5b0f5a4dd080, L_0x5b0f5a4dcd60;
+L_0x5b0f5a4dd730 .part v0x5b0f5a4dc8b0_0, 1, 1;
+L_0x5b0f5a4dd930 .part v0x5b0f5a4dc8b0_0, 0, 1;
+    .scope S_0x5b0f5a4c56c0;
+T_0 ;
+    %vpi_call 2 16 "$monitor", "Time = %0t i=%b y=%b ", $time, v0x5b0f5a4dc8b0_0, v0x5b0f5a4dc970_0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x5b0f5a4c56c0;
+T_1 ;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x5b0f5a4dc8b0_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x5b0f5a4dc8b0_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x5b0f5a4dc8b0_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x5b0f5a4dc8b0_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 23 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x5b0f5a4c56c0;
+T_2 ;
+    %vpi_call 2 26 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 27 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5b0f5a4c56c0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "dec.v";
