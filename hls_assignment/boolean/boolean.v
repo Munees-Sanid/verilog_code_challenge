@@ -1,3 +1,7 @@
+// Name        : Munees sanid
+// Roll No     : KVLSI2501076
+// Question No : B
+
 module not_mux(input a, output y);
     assign y = a ? 1'b0 : 1'b1;
 endmodule
