@@ -1,3 +1,7 @@
+// Name : Munees Sanid
+// Roll No: KVLSI2501076
+// Question No:A
+
 module comparator(
 	input [3:0]a,
 	input [3:0]b,
