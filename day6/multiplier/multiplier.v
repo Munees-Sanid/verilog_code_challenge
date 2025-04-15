@@ -1,3 +1,4 @@
+// 8 bit multipler using low cost circuit
 module multiplier(
 	input [3:0]n,
 	output [8*15:0]y);
