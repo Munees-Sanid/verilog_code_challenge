@@ -1,0 +1,68 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x576aed4c4470 .scope module, "tb" "tb" 2 7;
+ .timescale 0 0;
+v0x576aed4d8360_0 .var "a", 2 0;
+v0x576aed4d8420_0 .net "y", 0 0, L_0x576aed4d89b0;  1 drivers
+S_0x576aed4c4600 .scope module, "dut" "pallindrome" 2 10, 2 1 0, S_0x576aed4c4470;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "a";
+    .port_info 1 /OUTPUT 1 "y";
+L_0x576aed4d86b0 .functor XNOR 1, L_0x576aed4d84f0, L_0x576aed4d8610, C4<0>, C4<0>;
+v0x576aed4c47e0_0 .net *"_ivl_1", 0 0, L_0x576aed4d84f0;  1 drivers
+v0x576aed4d7cf0_0 .net *"_ivl_10", 1 0, L_0x576aed4d87f0;  1 drivers
+v0x576aed4d7dd0_0 .net *"_ivl_3", 0 0, L_0x576aed4d8610;  1 drivers
+v0x576aed4d7e90_0 .net *"_ivl_4", 0 0, L_0x576aed4d86b0;  1 drivers
+L_0x773f12129018 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x576aed4d7f50_0 .net/2s *"_ivl_6", 1 0, L_0x773f12129018;  1 drivers
+L_0x773f12129060 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x576aed4d8080_0 .net/2s *"_ivl_8", 1 0, L_0x773f12129060;  1 drivers
+v0x576aed4d8160_0 .net "a", 2 0, v0x576aed4d8360_0;  1 drivers
+v0x576aed4d8240_0 .net "y", 0 0, L_0x576aed4d89b0;  alias, 1 drivers
+L_0x576aed4d84f0 .part v0x576aed4d8360_0, 2, 1;
+L_0x576aed4d8610 .part v0x576aed4d8360_0, 0, 1;
+L_0x576aed4d87f0 .functor MUXZ 2, L_0x773f12129060, L_0x773f12129018, L_0x576aed4d86b0, C4<>;
+L_0x576aed4d89b0 .part L_0x576aed4d87f0, 0, 1;
+    .scope S_0x576aed4c4470;
+T_0 ;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x576aed4d8360_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x576aed4d8360_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x576aed4d8360_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x576aed4d8360_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x576aed4d8360_0, 0, 3;
+    %delay 5, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x576aed4c4470;
+T_1 ;
+    %vpi_call 2 20 "$monitor", "Time %0t  a=%b   :: y=%b ", $time, v0x576aed4d8360_0, v0x576aed4d8420_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x576aed4c4470;
+T_2 ;
+    %vpi_call 2 23 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x576aed4c4470 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "pallindrome.v";
