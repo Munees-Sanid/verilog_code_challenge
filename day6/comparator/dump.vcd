@@ -1,0 +1,60 @@
+$date
+	Tue Apr 15 12:32:31 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! a_ls_b $end
+$var wire 1 " a_gt_b $end
+$var wire 1 # a_eq_b $end
+$var reg 2 $ a [1:0] $end
+$var reg 2 % b [1:0] $end
+$scope module dut $end
+$var wire 2 & a [1:0] $end
+$var wire 2 ' b [1:0] $end
+$var wire 1 ! a_ls_b $end
+$var wire 1 " a_gt_b $end
+$var wire 1 # a_eq_b $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+b0 $
+1#
+0"
+0!
+$end
+#5
+b1 %
+b1 '
+b1 $
+b1 &
+#10
+1"
+0#
+b10 %
+b10 '
+b11 $
+b11 &
+#15
+b1 %
+b1 '
+#20
+0"
+1!
+b11 %
+b11 '
+b10 $
+b10 &
+#25
