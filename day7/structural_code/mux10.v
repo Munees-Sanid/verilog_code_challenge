@@ -5,9 +5,9 @@ module mux10(
 	input [3:0]s,
 	output y);
 wire [1:0]w;
-mux m1(i[3:0],s[3:2],w[1]);
-mux m2(i[7:4],s[3:2],w[0]);
-mux m3({i[9],i[8],w}, s[1:0], y);
+mux m1(i[3:0],s[1:0],w[0]);
+mux m2(i[7:4],s[1:0],w[1]);
+mux m3({i[9],i[8],w}, s[3:2], y);
 endmodule
 
 // test bench
@@ -23,4 +23,3 @@ for(integer j=0; j<2**4;j=j+1)begin
 s=j; #5;end
 end
 endmodule
-
