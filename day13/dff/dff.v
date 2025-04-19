@@ -26,12 +26,25 @@ module tb;
 reg d,clk;
 wire q;
 latch dut(d,clk,q);
-
+always #5 clk =~clk;
 initial begin 
 $monitor(" d =%b   clk = %b   ::   q =%b  ",d,clk,q);
-clk=0;
-# 5 clk =1;
-d=0;
-#5 d=1;
 end
+initial begin
+clk=0;
+d=1;
+#6 d=0;
+#7 d=1;
+#4 d=1;
+# 3 d=0;
+#50 $finish;
+end
+
+// dumpfile
+initial begin
+
+$dumpfile("dump.vcd");
+$dumpvars(0,tb);
+end
+
 endmodule
