@@ -9,8 +9,6 @@ always@(t,clk,rst)begin
 		temp<=0;
 		else if(t)
 		temp<=~temp;
-	else 
-	temp<=temp;
 q<=temp;
 end
 endmodule
@@ -26,8 +24,12 @@ tlatch dut(t,clk,rst,q);
 
 initial begin
 $monitor("t = %b  clk = %b  reset =%b  ::  output q = %b ",t,clk,rst,q);
+begin
+ rst=1; t=0; clk=0;
+#5 rst =0;
+end
 for(integer i =0; i<2**5;i++)begin
-{t,rst,clk}=i; #5; end
+{t,clk}=i; #5; end
 end
 
 initial begin
