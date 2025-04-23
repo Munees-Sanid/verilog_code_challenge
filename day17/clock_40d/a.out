@@ -1,0 +1,73 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5b584dd64570 .scope module, "test" "test" 2 3;
+ .timescale 0 0;
+v0x5b584dd64700_0 .var "clk", 0 0;
+v0x5b584ddad250_0 .var/real "duty", 0 0;
+v0x5b584ddad310_0 .var/real "time_period", 0 0;
+v0x5b584ddad3b0_0 .var/real "ton", 0 0;
+    .scope S_0x5b584dd64570;
+T_0 ;
+    %pushi/real 1342177280, 4071; load=40.0000
+    %store/real v0x5b584ddad250_0;
+    %end;
+    .thread T_0;
+    .scope S_0x5b584dd64570;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5b584dd64700_0, 0, 1;
+    %pushi/real 1342177280, 4070; load=20.0000
+    %store/real v0x5b584ddad310_0;
+    %load/real v0x5b584ddad310_0;
+    %load/real v0x5b584ddad250_0;
+    %mul/wr;
+    %pushi/vec4 100, 0, 32;
+    %cvt/rv/s;
+    %div/wr;
+    %store/real v0x5b584ddad3b0_0;
+    %delay 1000, 0;
+    %vpi_call 2 12 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x5b584dd64570;
+T_2 ;
+    %load/real v0x5b584ddad310_0;
+    %load/real v0x5b584ddad3b0_0;
+    %sub/wr;
+    %pushi/real 1073741824, 4066; load=1.00000
+    %mul/wr;
+    %cvt/vr 64;
+    %muli 1, 0, 64;
+    %ix/vec4 4;
+    %delayx 4;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5b584dd64700_0, 0, 1;
+    %load/real v0x5b584ddad3b0_0;
+    %pushi/real 1073741824, 4066; load=1.00000
+    %mul/wr;
+    %cvt/vr 64;
+    %muli 1, 0, 64;
+    %ix/vec4 4;
+    %delayx 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5b584dd64700_0, 0, 1;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x5b584dd64570;
+T_3 ;
+    %vpi_call 2 21 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, v0x5b584dd64700_0 {0 0 0};
+    %end;
+    .thread T_3;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "clock.v";
