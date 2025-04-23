@@ -25,7 +25,7 @@ dlatch dut(d,clk,rst,q);
 initial begin
 $monitor("d = %b  clk = %b  reset =%b  ::  output q = %b ",d,clk,rst,q);
 for(integer i =0; i<2**3;i++)begin
-{clk,rst,d}=i; #5; end
+{d,rst,clk}=i; #5; end
 end
 
 initial begin

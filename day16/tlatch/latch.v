@@ -4,12 +4,12 @@ module tlatch(
 	output reg q);
 	reg temp;
 always@(t,clk,rst)begin
-	if(~clk)
+	if(!clk)
 		if(rst)
-		temp<=0;
+		temp=0;
 		else if(t)
-		temp<=~temp;
-q<=temp;
+		temp=~temp;
+q=temp;
 end
 endmodule
 
