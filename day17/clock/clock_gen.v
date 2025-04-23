@@ -23,4 +23,4 @@
 			$dumpvars(0,clk);
 		end
 
-		endmodule
+			endmodule
