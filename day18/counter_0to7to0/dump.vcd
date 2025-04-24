@@ -1,0 +1,149 @@
+$date
+	Thu Apr 24 18:29:59 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 3 ! count [2:0] $end
+$var reg 1 " c $end
+$var reg 1 # clk $end
+$scope module dut $end
+$var wire 1 " c $end
+$var wire 1 # clk $end
+$var reg 3 $ count [2:0] $end
+$var reg 3 % temp [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+bx $
+0#
+0"
+bx !
+$end
+#5
+b0 !
+b0 $
+b1 %
+1#
+#10
+0#
+#15
+b1 !
+b1 $
+b10 %
+1#
+#20
+0#
+#25
+b10 !
+b10 $
+b11 %
+1#
+#30
+0#
+#35
+b11 !
+b11 $
+b100 %
+1#
+#40
+0#
+#45
+b100 !
+b100 $
+b101 %
+1#
+#50
+0#
+#55
+b101 !
+b101 $
+b110 %
+1#
+#60
+0#
+#65
+b110 !
+b110 $
+b111 %
+1#
+#70
+0#
+#75
+b111 !
+b111 $
+1#
+#80
+0#
+#85
+1#
+#90
+0#
+1"
+#95
+b110 %
+1#
+#100
+0#
+#105
+b110 !
+b110 $
+b101 %
+1#
+#110
+0#
+#115
+b101 !
+b101 $
+b100 %
+1#
+#120
+0#
+#125
+b100 !
+b100 $
+b11 %
+1#
+#130
+0#
+#135
+b11 !
+b11 $
+b10 %
+1#
+#140
+0#
+#145
+b10 !
+b10 $
+b1 %
+1#
+#150
+0#
+#155
+b1 !
+b1 $
+b0 %
+1#
+#160
+0#
+#165
+b0 !
+b0 $
+1#
+#170
+0#
+#175
+1#
+#180
+0#
