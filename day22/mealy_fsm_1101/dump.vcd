@@ -1,0 +1,88 @@
+$date
+	Mon Apr 28 17:22:20 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! y $end
+$var reg 1 " clk $end
+$var reg 1 # in $end
+$var reg 1 $ rst $end
+$scope module dut $end
+$var wire 1 $ clk $end
+$var wire 1 # in $end
+$var wire 1 " rst $end
+$var parameter 2 % s0 $end
+$var parameter 2 & s1 $end
+$var parameter 2 ' s2 $end
+$var parameter 2 ( s3 $end
+$var reg 2 ) next_state [1:0] $end
+$var reg 2 * state [1:0] $end
+$var reg 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 (
+b10 '
+b1 &
+b0 %
+$end
+#0
+$dumpvars
+bx *
+b0 )
+1$
+0#
+0"
+0!
+$end
+#5
+b0 *
+1"
+#10
+0"
+0$
+#15
+1"
+#20
+b1 )
+0"
+1#
+#25
+1"
+#30
+b0 )
+0"
+0#
+#35
+1"
+#40
+b1 )
+0"
+1#
+#45
+1"
+#50
+0"
+#55
+1"
+#60
+b0 )
+0"
+0#
+#65
+1"
+#70
+b1 )
+0"
+1#
+#75
+1"
+#80
+0"
