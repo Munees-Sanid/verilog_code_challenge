@@ -1,7 +1,7 @@
 // design code for mealy fsm 1101
 
 module fsm(
-	input clk,rst,in,
+	input rst,clk,in,
 	output reg y);
 parameter s0=2'b00,s1=2'b01,s2=2'b10,s3=2'b11;
 reg [1:0]state,next_state;

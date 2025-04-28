@@ -1,5 +1,5 @@
 $date
-	Mon Apr 28 17:37:58 2025
+	Mon Apr 28 18:04:31 2025
 $end
 $version
 	Icarus Verilog
@@ -13,9 +13,9 @@ $var reg 1 " clk $end
 $var reg 1 # in $end
 $var reg 1 $ rst $end
 $scope module dut $end
-$var wire 1 $ clk $end
+$var wire 1 " clk $end
 $var wire 1 # in $end
-$var wire 1 " rst $end
+$var wire 1 $ rst $end
 $var parameter 2 % s0 $end
 $var parameter 2 & s1 $end
 $var parameter 2 ' s2 $end
@@ -35,7 +35,7 @@ b0 %
 $end
 #0
 $dumpvars
-bx *
+b0 *
 b0 )
 1$
 0#
@@ -43,7 +43,6 @@ b0 )
 0!
 $end
 #5
-b0 *
 1"
 #10
 0"
@@ -55,22 +54,32 @@ b1 )
 0"
 1#
 #25
+b10 )
+b1 *
 1"
 #30
 0"
 #35
+b10 )
+b10 *
 1"
 #40
-b0 )
+b11 )
 0"
 0#
 #45
+b0 )
+b11 *
 1"
 #50
+1!
 b1 )
 0"
 1#
 #55
+0!
+b10 )
+b1 *
 1"
 #60
 0"
