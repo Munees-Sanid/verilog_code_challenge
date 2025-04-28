@@ -39,6 +39,6 @@ module Tlatch_tb;
              end
              initial begin
                $dumpfile("dump.vcd");
-               $dumpvars(0,Tlatch_tb);
+               $dumpvars();
              end
              endmodule
