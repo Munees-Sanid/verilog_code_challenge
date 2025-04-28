@@ -31,6 +31,10 @@ s3: begin
 	next_state=(in)?s1:s0;
 	y=(in)?1:0;
 	end
+default: begin
+    next_state = s0;
+     y = 0;
+end
 endcase
 end
 endmodule

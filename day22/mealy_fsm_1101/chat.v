@@ -1,5 +1,4 @@
-// Full Design and Testbench for Mealy FSM detecting 1101 sequence
-
+// Design Code for Mealy FSM to detect 1101 sequence
 module fsm(
     input clk, rst, in,
     output reg y
@@ -39,14 +38,17 @@ module fsm(
                 next_state = (in) ? s1 : s0;
                 y = (in) ? 1 : 0; // Output 1 when full 1101 sequence detected
             end
+            default: begin
+                next_state = s0;
+                y = 0;
+            end
         endcase
     end
 endmodule
 
-// Testbench
 module tb;
-    reg rst, clk, in;   // Input signals
-    wire y;             // Output signal
+    reg rst, clk, in;    // Input signals
+    wire y;              // Output signal
 
     // Instantiate the FSM module
     fsm dut(
@@ -57,7 +59,7 @@ module tb;
     );
 
     // Clock generation
-    always #5 clk = ~clk; // 5-time unit clock period
+    always #5 clk = ~clk;  // 5-time unit clock period
 
     initial begin
         // Initialize signals
@@ -86,7 +88,7 @@ module tb;
     // VCD file for waveform generation
     initial begin
         $dumpfile("dump.vcd");  // Output VCD file
-        $dumpvars(0, tb);       // Dump all variables
+        $dumpvars(0, tb, dut);  // Dump all variables in the tb and dut module
     end
 endmodule
 

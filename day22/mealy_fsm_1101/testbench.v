@@ -11,8 +11,6 @@ rst=1;
 in=0;
 #10 rst=0;
 #10 in=1;
-#10 in=0;
-#10 in=1;
 #10 in =1;
 #10 in =0;
 #10 in =1;
@@ -20,6 +18,6 @@ in=0;
 end
 initial begin
  $dumpfile("dump.vcd");
- $dumpvars(0,tb);
+ $dumpvars(0,tb,dut.state);
  end
  endmodule
