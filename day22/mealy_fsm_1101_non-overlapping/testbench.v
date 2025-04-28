@@ -10,11 +10,14 @@ rst=1; in=0;
 
 #10 rst=0;
 
-#10 in=1;
-#10 in =1;
-#10 in =0;
-#10 in =1;
-#10 $finish;
+#5 in =1;
+#5 in=1;
+#5 in=1;
+#5 in =1;
+#5 in =0;
+#5 in =1;
+#5 in=0;
+#5 $finish;
 end
 initial begin
 $monitor(" sim = %0t in=%b :: y=%b state = %d",$time,in,y,dut.state);
