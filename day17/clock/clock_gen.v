@@ -1,16 +1,16 @@
 /////-----------------------Generate the Clock for speficif Frequency in MhZ------
-
+`timescale 1ns/1ps
 	module test;
 		reg clk;
-		real freq= 100; // (in MHZ) 
+		real freq= 1; // (in MHZ) 
 		real time_period, ton; // (In Ns)
-		real duty = 70; // in percentage
+		real duty = 50; // in percentage
 
 			initial begin
 				clk= 0;
-				time_period= (1000/freq);
+				time_period= (1/freq);
 				ton= (time_period*duty)/100;
-			 #1000 $finish;
+			 #100 $finish;
 			end
 
 			always begin

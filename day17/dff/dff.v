@@ -1,5 +1,5 @@
 // design code for asyn dff
-module tff(
+module dff(
 	input d,clk,rst,
 	output reg q);
 always@(posedge clk or posedge rst)begin
@@ -15,7 +15,7 @@ endmodule
 module tb;
 reg d,clk,rst;
 wire q;
-tff dut(d,clk,rst,q);
+dff dut(d,clk,rst,q);
 always #5 clk=~clk;
 initial begin
 $monitor("rst =%b  clk=%b  d =%b  ::  q=%b",rst,clk,d,q);
