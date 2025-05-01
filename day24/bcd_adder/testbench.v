@@ -9,7 +9,7 @@ wire cout;
 bcd dut(a,b,cin,sum,cout);
 	
 initial begin
-$monitor("a=%d b=%d cin=%d :: result in bcd = %d%0d",a,b,cin,cout,sum);
+$monitor("a=%d b=%d cin=%d :: result in bcd = %d",a,b,cin,sum);
 a=9; b=5; cin=0;
 #10 a=1; b=7; cin=0;
 #10 a=4; b=7; cin=0;
