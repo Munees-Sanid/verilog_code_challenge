@@ -1,0 +1,57 @@
+$date
+	Thu May  1 15:46:18 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var reg 1 % cin $end
+$scope module dut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % cin $end
+$var reg 1 " cout $end
+$var reg 4 ( sum [3:0] $end
+$var reg 5 ) temp [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10100 )
+b100 (
+b101 '
+b1001 &
+0%
+b101 $
+b1001 #
+1"
+b100 !
+$end
+#10
+b1000 !
+b1000 (
+0"
+b1000 )
+b111 $
+b111 '
+b1 #
+b1 &
+#20
+b1 !
+b1 (
+1"
+b10001 )
+b100 #
+b100 &
+#30
