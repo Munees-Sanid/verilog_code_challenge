@@ -1,0 +1,7 @@
+sim= 5 rst =1 load=x :: parrarel in = x :: shift register =0000 :: serial out =0
+sim= 15 rst =0 load=1 :: parrarel in =10 :: shift register =0000 :: serial out =0
+sim= 25 rst =0 load=0 :: parrarel in =10 :: shift register =1010 :: serial out =1
+sim= 35 rst =0 load=0 :: parrarel in =10 :: shift register =0100 :: serial out =0
+sim= 45 rst =0 load=0 :: parrarel in =10 :: shift register =1000 :: serial out =1
+sim= 55 rst =0 load=0 :: parrarel in =10 :: shift register =0000 :: serial out =0
+sim= 65 rst =0 load=0 :: parrarel in =10 :: shift register =0000 :: serial out =0

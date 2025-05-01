@@ -1,5 +1,5 @@
 $date
-	Tue Apr 29 15:08:18 2025
+	Thu May  1 21:06:37 2025
 $end
 $version
 	Icarus Verilog
@@ -13,13 +13,14 @@ $var reg 1 " clk $end
 $var reg 1 # load $end
 $var reg 4 $ parallel_in [3:0] $end
 $var reg 1 % rst $end
+$var integer 32 & file [31:0] $end
 $scope module dut $end
 $var wire 1 " clk $end
 $var wire 1 # load $end
-$var wire 4 & parallel_in [3:0] $end
+$var wire 4 ' parallel_in [3:0] $end
 $var wire 1 % rst $end
 $var wire 1 ! s_out $end
-$var reg 4 ' shift_register [3:0] $end
+$var reg 4 ( shift_register [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -28,8 +29,9 @@ $dumpall
 $end
 #0
 $dumpvars
-b0 '
-bx &
+b0 (
+bx '
+b10000000000000000000000000000011 &
 1%
 bx $
 x#
@@ -43,29 +45,29 @@ $end
 0%
 #15
 1!
-b1010 '
+b1010 (
 1"
 b1010 $
-b1010 &
+b1010 '
 1#
 #20
 0"
 0#
 #25
 0!
-b100 '
+b100 (
 1"
 #30
 0"
 #35
 1!
-b1000 '
+b1000 (
 1"
 #40
 0"
 #45
 0!
-b0 '
+b0 (
 1"
 #50
 0"
