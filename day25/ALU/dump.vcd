@@ -1,0 +1,93 @@
+$date
+	Fri May  2 12:59:28 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 5 ! y [4:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 3 $ op [2:0] $end
+$var reg 33 % sym [32:0] $end
+$scope module dut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 3 ( op [2:0] $end
+$var reg 5 ) y [4:0] $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 * i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 *
+b1101 )
+b0 (
+b11 '
+b1010 &
+b101011 %
+b0 $
+b11 #
+b1010 "
+b1101 !
+$end
+#5
+b111 !
+b111 )
+b101101 %
+b1 $
+b1 (
+b1 *
+#10
+b1 !
+b1 )
+b100101 %
+b10 $
+b10 (
+b10 *
+#15
+b11110 !
+b11110 )
+b101010 %
+b11 $
+b11 (
+b11 *
+#20
+b10 !
+b10 )
+b100110 %
+b100 $
+b100 (
+b100 *
+#25
+b1011 !
+b1011 )
+b1111100 %
+b101 $
+b101 (
+b101 *
+#30
+b1001 !
+b1001 )
+b1011110 %
+b110 $
+b110 (
+b110 *
+#35
+b10110 !
+b10110 )
+b111111001011110 %
+b111 $
+b111 (
+b111 *
+#40
+b1000 *
