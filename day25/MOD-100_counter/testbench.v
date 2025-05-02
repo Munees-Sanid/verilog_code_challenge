@@ -13,7 +13,7 @@ $monitor("Sim=%0t rst=%b counter=%d",$time,rst,count);
 clk=0;
 rst=1;
 #13 rst=0;
-#1000 $finish;
+#2000 $finish;
 end
  
 initial begin
