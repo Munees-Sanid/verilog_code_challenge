@@ -1,5 +1,5 @@
 // case 1
-/*module test;
+module test;
 integer a,b,c,d;
 initial begin
  	a=100;
@@ -17,7 +17,7 @@ initial begin
  #0
  b<=a;
  a<=b;
- a<=100;
+
  a=20;
  
  end
@@ -25,7 +25,7 @@ initial begin
  initial $strobe("sim=%0t   ::   a=%0d   b=%0d  c=%0d  d=%0d",$time,a,b,c,d);
 
  endmodule
-*/
+
 
 // case 2
 
@@ -59,7 +59,7 @@ initial begin
  */
  
  // case 3
- 
+/* 
 module test;
 integer a,b,c,d;
 initial begin
@@ -87,3 +87,4 @@ initial begin
  initial $strobe("sim=%0t   ::   a=%0d   b=%0d  c=%0d  d=%0d",$time,a,b,c,d);
 
  endmodule
+ */
