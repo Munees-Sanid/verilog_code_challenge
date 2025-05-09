@@ -1,0 +1,82 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5dcfa0a17650 .scope module, "tb" "tb" 2 2;
+ .timescale 0 0;
+v0x5dcfa0a2aff0_0 .var "a", 0 0;
+v0x5dcfa0a2b0b0_0 .var "b", 0 0;
+v0x5dcfa0a2b180_0 .net "c", 0 0, v0x5dcfa0a2adb0_0;  1 drivers
+v0x5dcfa0a2b280_0 .net "s", 0 0, v0x5dcfa0a2ae80_0;  1 drivers
+S_0x5dcfa0a177e0 .scope module, "dut" "adder" 2 5, 3 1 0, S_0x5dcfa0a17650;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+v0x5dcfa0a2ac10_0 .net "a", 0 0, v0x5dcfa0a2aff0_0;  1 drivers
+v0x5dcfa0a2acf0_0 .net "b", 0 0, v0x5dcfa0a2b0b0_0;  1 drivers
+v0x5dcfa0a2adb0_0 .var "c", 0 0;
+v0x5dcfa0a2ae80_0 .var "s", 0 0;
+E_0x5dcfa09dd910 .event anyedge, v0x5dcfa0a2acf0_0, v0x5dcfa0a2ac10_0;
+S_0x5dcfa09dd490 .scope function.vec4.s2, "HA" "HA" 3 4, 3 4 0, S_0x5dcfa0a177e0;
+ .timescale 0 0;
+; Variable HA is vec4 return value of scope S_0x5dcfa09dd490
+v0x5dcfa0a2aa80_0 .var "x", 0 0;
+v0x5dcfa0a2ab40_0 .var "y", 0 0;
+TD_tb.dut.HA ;
+    %load/vec4 v0x5dcfa0a2aa80_0;
+    %pad/u 2;
+    %load/vec4 v0x5dcfa0a2ab40_0;
+    %pad/u 2;
+    %add;
+    %ret/vec4 0, 0, 2;  Assign to HA (store_vec4_to_lval)
+    %end;
+    .scope S_0x5dcfa0a177e0;
+T_1 ;
+    %wait E_0x5dcfa09dd910;
+    %load/vec4 v0x5dcfa0a2ac10_0;
+    %load/vec4 v0x5dcfa0a2acf0_0;
+    %store/vec4 v0x5dcfa0a2ab40_0, 0, 1;
+    %store/vec4 v0x5dcfa0a2aa80_0, 0, 1;
+    %callf/vec4 TD_tb.dut.HA, S_0x5dcfa09dd490;
+    %split/vec4 1;
+    %store/vec4 v0x5dcfa0a2ae80_0, 0, 1;
+    %store/vec4 v0x5dcfa0a2adb0_0, 0, 1;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_0x5dcfa0a17650;
+T_2 ;
+    %vpi_call 2 7 "$monitor", "sim=%0t  a = %b b = %b :: sum = %b carry = %b", $time, v0x5dcfa0a2aff0_0, v0x5dcfa0a2b0b0_0, v0x5dcfa0a2b280_0, v0x5dcfa0a2b180_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dcfa0a2aff0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dcfa0a2b0b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dcfa0a2aff0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5dcfa0a2b0b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5dcfa0a2aff0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5dcfa0a2b0b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5dcfa0a2aff0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x5dcfa0a2b0b0_0, 0, 1;
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "./design.v";
