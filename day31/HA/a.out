@@ -1,0 +1,175 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6462ec3dd490 .scope module, "tb" "tb" 2 43;
+ .timescale 0 0;
+v0x6462ec43a9a0_0 .var "a", 0 0;
+v0x6462ec43aa60_0 .var "b", 0 0;
+v0x6462ec43ab20_0 .net "borrow_beh", 0 0, v0x6462ec4390b0_0;  1 drivers
+v0x6462ec43abf0_0 .net "borrow_df", 0 0, L_0x6462ec43b5f0;  1 drivers
+v0x6462ec43acc0_0 .net "borrow_str", 0 0, L_0x6462ec43bd20;  1 drivers
+v0x6462ec43ad60_0 .var "c", 0 0;
+v0x6462ec43ae00_0 .net "diff_beh", 0 0, v0x6462ec439250_0;  1 drivers
+v0x6462ec43aed0_0 .net "diff_df", 0 0, L_0x6462ec43b0b0;  1 drivers
+v0x6462ec43afa0_0 .net "diff_str", 0 0, L_0x6462ec43ba50;  1 drivers
+S_0x6462ec3dd620 .scope begin, "$ivl_for_loop0" "$ivl_for_loop0" 2 51, 2 51 0, S_0x6462ec3dd490;
+ .timescale 0 0;
+v0x6462ec41cd90_0 .var/i "i", 31 0;
+S_0x6462ec4380f0 .scope module, "dut1" "FS_df" 2 46, 2 2 0, S_0x6462ec3dd490;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow";
+L_0x6462ec43b040 .functor XOR 1, v0x6462ec43a9a0_0, v0x6462ec43aa60_0, C4<0>, C4<0>;
+L_0x6462ec43b0b0 .functor XOR 1, L_0x6462ec43b040, v0x6462ec43ad60_0, C4<0>, C4<0>;
+L_0x6462ec43b120 .functor NOT 1, v0x6462ec43a9a0_0, C4<0>, C4<0>, C4<0>;
+L_0x6462ec43b190 .functor AND 1, L_0x6462ec43b120, v0x6462ec43aa60_0, C4<1>, C4<1>;
+L_0x6462ec43b280 .functor NOT 1, v0x6462ec43a9a0_0, C4<0>, C4<0>, C4<0>;
+L_0x6462ec43b2f0 .functor AND 1, L_0x6462ec43b280, v0x6462ec43ad60_0, C4<1>, C4<1>;
+L_0x6462ec43b420 .functor OR 1, L_0x6462ec43b190, L_0x6462ec43b2f0, C4<0>, C4<0>;
+L_0x6462ec43b530 .functor AND 1, v0x6462ec43aa60_0, v0x6462ec43ad60_0, C4<1>, C4<1>;
+L_0x6462ec43b5f0 .functor OR 1, L_0x6462ec43b420, L_0x6462ec43b530, C4<0>, C4<0>;
+v0x6462ec4382f0_0 .net *"_ivl_0", 0 0, L_0x6462ec43b040;  1 drivers
+v0x6462ec4383d0_0 .net *"_ivl_10", 0 0, L_0x6462ec43b2f0;  1 drivers
+v0x6462ec4384b0_0 .net *"_ivl_12", 0 0, L_0x6462ec43b420;  1 drivers
+v0x6462ec438570_0 .net *"_ivl_14", 0 0, L_0x6462ec43b530;  1 drivers
+v0x6462ec438650_0 .net *"_ivl_4", 0 0, L_0x6462ec43b120;  1 drivers
+v0x6462ec438780_0 .net *"_ivl_6", 0 0, L_0x6462ec43b190;  1 drivers
+v0x6462ec438860_0 .net *"_ivl_8", 0 0, L_0x6462ec43b280;  1 drivers
+v0x6462ec438940_0 .net "a", 0 0, v0x6462ec43a9a0_0;  1 drivers
+v0x6462ec438a00_0 .net "b", 0 0, v0x6462ec43aa60_0;  1 drivers
+v0x6462ec438ac0_0 .net "borrow", 0 0, L_0x6462ec43b5f0;  alias, 1 drivers
+v0x6462ec438b80_0 .net "c", 0 0, v0x6462ec43ad60_0;  1 drivers
+v0x6462ec438c40_0 .net "diff", 0 0, L_0x6462ec43b0b0;  alias, 1 drivers
+S_0x6462ec438da0 .scope module, "dut2" "FS_beh" 2 47, 2 11 0, S_0x6462ec3dd490;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow";
+v0x6462ec438f50_0 .net "a", 0 0, v0x6462ec43a9a0_0;  alias, 1 drivers
+v0x6462ec439010_0 .net "b", 0 0, v0x6462ec43aa60_0;  alias, 1 drivers
+v0x6462ec4390b0_0 .var "borrow", 0 0;
+v0x6462ec439180_0 .net "c", 0 0, v0x6462ec43ad60_0;  alias, 1 drivers
+v0x6462ec439250_0 .var "diff", 0 0;
+E_0x6462ec417f70 .event anyedge, v0x6462ec438b80_0, v0x6462ec438a00_0, v0x6462ec438940_0;
+S_0x6462ec4393a0 .scope module, "dut3" "FS_str" 2 48, 2 32 0, S_0x6462ec3dd490;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow";
+L_0x6462ec43bd20 .functor OR 1, L_0x6462ec43bc60, L_0x6462ec43b940, C4<0>, C4<0>;
+v0x6462ec43a370_0 .net "a", 0 0, v0x6462ec43a9a0_0;  alias, 1 drivers
+v0x6462ec43a430_0 .net "b", 0 0, v0x6462ec43aa60_0;  alias, 1 drivers
+v0x6462ec43a4f0_0 .net "borrow", 0 0, L_0x6462ec43bd20;  alias, 1 drivers
+v0x6462ec43a590_0 .net "c", 0 0, v0x6462ec43ad60_0;  alias, 1 drivers
+v0x6462ec43a630_0 .net "diff", 0 0, L_0x6462ec43ba50;  alias, 1 drivers
+v0x6462ec43a720_0 .net "w1", 0 0, L_0x6462ec43b750;  1 drivers
+v0x6462ec43a810_0 .net "w2", 0 0, L_0x6462ec43b940;  1 drivers
+v0x6462ec43a8b0_0 .net "w3", 0 0, L_0x6462ec43bc60;  1 drivers
+S_0x6462ec439580 .scope module, "a1" "HA" 2 36, 2 23 0, S_0x6462ec4393a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_0x6462ec43b750 .functor XOR 1, v0x6462ec43a9a0_0, v0x6462ec43aa60_0, C4<0>, C4<0>;
+L_0x6462ec43b8d0 .functor NOT 1, v0x6462ec43a9a0_0, C4<0>, C4<0>, C4<0>;
+L_0x6462ec43b940 .functor AND 1, L_0x6462ec43b8d0, v0x6462ec43aa60_0, C4<1>, C4<1>;
+v0x6462ec4397b0_0 .net *"_ivl_2", 0 0, L_0x6462ec43b8d0;  1 drivers
+v0x6462ec4398b0_0 .net "a", 0 0, v0x6462ec43a9a0_0;  alias, 1 drivers
+v0x6462ec4399c0_0 .net "b", 0 0, v0x6462ec43aa60_0;  alias, 1 drivers
+v0x6462ec439ab0_0 .net "borrow", 0 0, L_0x6462ec43b940;  alias, 1 drivers
+v0x6462ec439b50_0 .net "diff", 0 0, L_0x6462ec43b750;  alias, 1 drivers
+S_0x6462ec439cc0 .scope module, "a2" "HA" 2 37, 2 23 0, S_0x6462ec4393a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_0x6462ec43ba50 .functor XOR 1, L_0x6462ec43b750, v0x6462ec43ad60_0, C4<0>, C4<0>;
+L_0x6462ec43bbd0 .functor NOT 1, L_0x6462ec43b750, C4<0>, C4<0>, C4<0>;
+L_0x6462ec43bc60 .functor AND 1, L_0x6462ec43bbd0, v0x6462ec43ad60_0, C4<1>, C4<1>;
+v0x6462ec439ec0_0 .net *"_ivl_2", 0 0, L_0x6462ec43bbd0;  1 drivers
+v0x6462ec439fa0_0 .net "a", 0 0, L_0x6462ec43b750;  alias, 1 drivers
+v0x6462ec43a060_0 .net "b", 0 0, v0x6462ec43ad60_0;  alias, 1 drivers
+v0x6462ec43a180_0 .net "borrow", 0 0, L_0x6462ec43bc60;  alias, 1 drivers
+v0x6462ec43a220_0 .net "diff", 0 0, L_0x6462ec43ba50;  alias, 1 drivers
+    .scope S_0x6462ec438da0;
+T_0 ;
+    %wait E_0x6462ec417f70;
+    %load/vec4 v0x6462ec438f50_0;
+    %load/vec4 v0x6462ec439010_0;
+    %xor;
+    %load/vec4 v0x6462ec439180_0;
+    %xor;
+    %store/vec4 v0x6462ec439250_0, 0, 1;
+    %load/vec4 v0x6462ec438f50_0;
+    %inv;
+    %load/vec4 v0x6462ec439010_0;
+    %and;
+    %load/vec4 v0x6462ec438f50_0;
+    %inv;
+    %load/vec4 v0x6462ec439180_0;
+    %and;
+    %or;
+    %load/vec4 v0x6462ec439010_0;
+    %load/vec4 v0x6462ec439180_0;
+    %and;
+    %or;
+    %store/vec4 v0x6462ec4390b0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0x6462ec3dd490;
+T_1 ;
+    %vpi_call 2 50 "$monitor", "a=%b b = %b  c= %b ::  diff_df = %b,diff_beh = %b, diff_str = %b , borrow_df = %b , borrow_beh = %b, borrow_str = %b", v0x6462ec43a9a0_0, v0x6462ec43aa60_0, v0x6462ec43ad60_0, v0x6462ec43aed0_0, v0x6462ec43ae00_0, v0x6462ec43afa0_0, v0x6462ec43abf0_0, v0x6462ec43ab20_0, v0x6462ec43acc0_0 {0 0 0};
+    %fork t_1, S_0x6462ec3dd620;
+    %jmp t_0;
+    .scope S_0x6462ec3dd620;
+t_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x6462ec41cd90_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0x6462ec41cd90_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/vec4 v0x6462ec41cd90_0;
+    %pad/s 3;
+    %split/vec4 1;
+    %store/vec4 v0x6462ec43ad60_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0x6462ec43aa60_0, 0, 1;
+    %store/vec4 v0x6462ec43a9a0_0, 0, 1;
+    %delay 2, 0;
+    %load/vec4 v0x6462ec41cd90_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x6462ec41cd90_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %end;
+    .scope S_0x6462ec3dd490;
+t_0 %join;
+    %end;
+    .thread T_1;
+    .scope S_0x6462ec3dd490;
+T_2 ;
+    %vpi_call 2 58 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 59 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6462ec3dd490 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "design.v";
