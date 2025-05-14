@@ -1,0 +1,124 @@
+$date
+	Wed May 14 12:11:53 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$var reg 1 $ si $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 4 % q [3:0] $end
+$var wire 1 # rst $end
+$var wire 1 $ si $end
+$var reg 4 & temp [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b0 %
+x$
+1#
+0"
+b0 !
+$end
+#5
+1"
+#10
+0"
+#12
+0$
+0#
+#15
+1"
+#20
+0"
+#22
+1$
+#25
+b1000 !
+b1000 %
+b1000 &
+1"
+#30
+0"
+#35
+b1100 !
+b1100 %
+b1100 &
+1"
+#40
+0"
+#42
+0$
+#45
+b110 !
+b110 %
+b110 &
+1"
+#50
+0"
+#52
+1$
+#55
+b1011 !
+b1011 %
+b1011 &
+1"
+#60
+0"
+#62
+0$
+#65
+b101 !
+b101 %
+b101 &
+1"
+#70
+0"
+#72
+1$
+#75
+b1010 !
+b1010 %
+b1010 &
+1"
+#80
+0"
+#82
+0$
+#85
+b101 !
+b101 %
+b101 &
+1"
+#90
+0"
+#92
+1$
+#95
+b1010 !
+b1010 %
+b1010 &
+1"
+#100
+0"
+#105
+b1101 !
+b1101 %
+b1101 &
+1"
+#110
+0"
+#112
