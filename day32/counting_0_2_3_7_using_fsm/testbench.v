@@ -2,7 +2,7 @@
 // test bench
 module tb;
 reg clk,rst;
-wire [3:0]count;
+wire [2:0]count;
 counter dut(.*);
 initial begin
 $monitor("time = %0t  count = %d",$time,count);

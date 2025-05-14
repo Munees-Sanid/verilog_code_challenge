@@ -1,4 +1,4 @@
-// counting 0 2 3 7 0 reapeat
+// updown counter
 module counter(
 	input clk,rst,
 	output reg [2:0]count);
