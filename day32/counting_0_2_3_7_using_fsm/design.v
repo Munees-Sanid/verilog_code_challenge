@@ -1,7 +1,7 @@
 // counting 0 2 3 7 0 reapeat
 module counter(
 	input clk,rst,
-	output reg [2:0]count);
+	output [2:0]count);
 
 reg [2:0] ps,ns;
 
@@ -28,7 +28,5 @@ s7: ns=s0;
 
 endcase
 end
-always@(ps)begin
-count=ps;
-end
+assign count=ps;
 endmodule
