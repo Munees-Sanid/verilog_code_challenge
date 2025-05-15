@@ -1,0 +1,92 @@
+$date
+	Thu May 15 17:04:34 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 2 # control [1:0] $end
+$var reg 4 $ data_in [3:0] $end
+$var reg 1 % rst $end
+$var reg 1 & si_left $end
+$var reg 1 ' si_right $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 2 ( control [1:0] $end
+$var wire 4 ) data_in [3:0] $end
+$var wire 4 * q [3:0] $end
+$var wire 1 % rst $end
+$var wire 1 & si_left $end
+$var wire 1 ' si_right $end
+$var reg 4 + temp [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx +
+bx *
+b1010 )
+b0 (
+1'
+0&
+1%
+b1010 $
+b0 #
+0"
+bx !
+$end
+#5
+b0 !
+b0 *
+b0 +
+1"
+#10
+0"
+#12
+b11 #
+b11 (
+0%
+#15
+b1010 !
+b1010 *
+b1010 +
+1"
+#20
+0"
+#22
+b1 #
+b1 (
+#25
+b101 !
+b101 *
+b101 +
+1"
+#30
+0"
+#32
+b10 #
+b10 (
+#35
+b1011 !
+b1011 *
+b1011 +
+1"
+#40
+0"
+#45
+b111 !
+b111 *
+b111 +
+1"
+#50
+0"
+#52
