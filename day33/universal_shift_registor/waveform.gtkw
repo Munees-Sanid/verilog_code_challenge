@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Thu May 15 13:07:49 2025
+[*]
+[dumpfile] "/home/munees-sanid/github/verilog_code/day33/universal_shift_registor/dump.vcd"
+[dumpfile_mtime] "Thu May 15 12:15:45 2025"
+[dumpfile_size] 945
+[savefile] "/home/munees-sanid/github/verilog_code/day33/universal_shift_registor/waveform.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-4.100314 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 278
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 157
+@28
+tb.clk
+@22
+tb.data_in[3:0]
+@28
+tb.control[1:0]
+tb.si_right
+@29
+tb.si_left
+[pattern_trace] 1
+[pattern_trace] 0
