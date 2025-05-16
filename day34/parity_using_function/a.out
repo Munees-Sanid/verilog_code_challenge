@@ -1,0 +1,66 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x62a71842bb00 .scope module, "tb" "tb" 2 2;
+ .timescale 0 0;
+v0x62a71843d1c0_0 .var "din", 7 0;
+v0x62a71843d2b0_0 .net "y", 0 0, L_0x62a71843d380;  1 drivers
+S_0x62a71842bc90 .scope module, "dut" "parity" 2 5, 3 1 0, S_0x62a71842bb00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "din";
+    .port_info 1 /OUTPUT 1 "y";
+v0x62a71843cfa0_0 .net "din", 7 0, v0x62a71843d1c0_0;  1 drivers
+v0x62a71843d0a0_0 .net "y", 0 0, L_0x62a71843d380;  alias, 1 drivers
+L_0x62a71843d380 .ufunc/vec4 TD_tb.dut.parity_func, 1, v0x62a71843d1c0_0 (v0x62a7183f1670_0) S_0x62a7183f1490;
+S_0x62a7183f1490 .scope function.vec4.s1, "parity_func" "parity_func" 3 4, 3 4 0, S_0x62a71842bc90;
+ .timescale 0 0;
+v0x62a7183f1670_0 .var "din", 7 0;
+v0x62a71843cd60_0 .var/i "i", 31 0;
+; Variable parity_func is vec4 return value of scope S_0x62a7183f1490
+v0x62a71843cee0_0 .var "temp", 0 0;
+TD_tb.dut.parity_func ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x62a71843cee0_0, 0, 1;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x62a71843cd60_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x62a71843cd60_0;
+    %cmpi/s 7, 0, 32;
+    %flag_or 5, 4;
+    %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x62a71843cee0_0;
+    %load/vec4 v0x62a7183f1670_0;
+    %load/vec4 v0x62a71843cd60_0;
+    %part/s 1;
+    %xor;
+    %store/vec4 v0x62a71843cee0_0, 0, 1;
+    %load/vec4 v0x62a71843cd60_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x62a71843cd60_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %load/vec4 v0x62a71843cee0_0;
+    %ret/vec4 0, 0, 1;  Assign to parity_func (store_vec4_to_lval)
+    %end;
+    .scope S_0x62a71842bb00;
+T_1 ;
+    %vpi_call 2 7 "$monitor", "din = %b :: y = %b", v0x62a71843d1c0_0, v0x62a71843d2b0_0 {0 0 0};
+    %pushi/vec4 155, 0, 8;
+    %store/vec4 v0x62a71843d1c0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 243, 0, 8;
+    %store/vec4 v0x62a71843d1c0_0, 0, 8;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "./design.v";
