@@ -1,0 +1,178 @@
+$date
+	Fri May 16 16:26:31 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! clk_out $end
+$var reg 1 " clk_in $end
+$var reg 1 # rst $end
+$scope module dut $end
+$var wire 1 " clk_in $end
+$var wire 1 ! clk_out $end
+$var wire 1 # rst $end
+$var parameter 32 $ n $end
+$var reg 1 % temp_clk $end
+$var integer 32 & count [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 $
+$end
+#0
+$dumpvars
+b0 &
+0%
+1#
+0"
+0!
+$end
+#5
+1"
+#10
+0"
+#12
+0#
+#15
+b1 &
+1"
+#20
+b10 &
+0"
+#25
+b11 &
+1"
+#30
+b100 &
+0"
+#35
+1!
+1%
+b0 &
+1"
+#40
+b1 &
+0"
+#45
+b10 &
+1"
+#50
+b11 &
+0"
+#55
+b100 &
+1"
+#60
+0!
+0%
+b0 &
+0"
+#65
+b1 &
+1"
+#70
+b10 &
+0"
+#75
+b11 &
+1"
+#80
+b100 &
+0"
+#85
+1!
+1%
+b0 &
+1"
+#90
+b1 &
+0"
+#95
+b10 &
+1"
+#100
+b11 &
+0"
+#105
+b100 &
+1"
+#110
+0!
+0%
+b0 &
+0"
+#115
+b1 &
+1"
+#120
+b10 &
+0"
+#125
+b11 &
+1"
+#130
+b100 &
+0"
+#135
+1!
+1%
+b0 &
+1"
+#140
+b1 &
+0"
+#145
+b10 &
+1"
+#150
+b11 &
+0"
+#155
+b100 &
+1"
+#160
+0!
+0%
+b0 &
+0"
+#165
+b1 &
+1"
+#170
+b10 &
+0"
+#175
+b11 &
+1"
+#180
+b100 &
+0"
+#185
+1!
+1%
+b0 &
+1"
+#190
+b1 &
+0"
+#195
+b10 &
+1"
+#200
+b11 &
+0"
+#205
+b100 &
+1"
+#210
+0!
+0%
+b0 &
+0"
+#212
