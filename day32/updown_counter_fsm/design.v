@@ -1,34 +1,48 @@
-// updown counter
-module counter(
-	input clk,rst,
-	output reg [2:0]count);
+module moore(
+	input updown,clk,rst,
+	output reg [2:0] count);
+reg [1:0]ps,ns;
+parameter idle = 2'b00;
+parameter up_count = 2'b01;
+parameter down_count = 2'b10;
 
-reg [2:0] ps,ns;
-
-parameter s0=3'b000;
-parameter s2=3'b010;
-parameter s3=3'b011;
-parameter s7=3'b111;
 
 always@(posedge clk)
-begin 
-	if(~rst)
-		ps<=s0;
-	else
+	begin
+	if(!rst)
+		ps<=idle;
+	else 
 		ps<=ns;
-end
+	end
 
-always @(ps)begin
+always@(updown,ps)begin
 case(ps)
-s0: ns=s2;
-s2: ns=s3;
-s3: ns=s7;
-s7: ns=s0;
+	idle: if(updown)
+		ns=up_count;
+		else 	
+		ns=down_count;
+		
+	up_count: if(updown)
+		ns=up_count;
+		else 
+		ns=down_count;
+	down_count: if(updown)
+		ns=up_count;
+		else
+		ns=down_count;
 
+	endcase
+	end
+always@(posedge clk)begin
+	if(!rst)
+	count<=0;
+	else begin
+	case (ps)
+	up_count: count<=count+1;
+	down_count: count<=count-1;
+	default :count<=count;
+	endcase
+	end
+	end
 
-endcase
-end
-always@(ps)begin
-count=ps;
-end
 endmodule
