@@ -11,4 +11,3 @@ initial begin
     $display("c = %b", c);
 end
 endmodule
-
