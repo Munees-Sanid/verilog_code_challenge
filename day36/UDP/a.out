@@ -1,0 +1,49 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x589c4d86f5f0 .scope module, "tb" "tb" 2 2;
+ .timescale 0 0;
+UDP_xor_udp .udp/comb "xor_udp", 2
+ ,"000"
+ ,"011"
+ ,"101"
+ ,"110";
+L_0x589c4d87fdb0 .udp UDP_xor_udp, v0x589c4d86f780_0, v0x589c4d87fc50_0;
+v0x589c4d86f780_0 .var "a", 0 0;
+v0x589c4d87fc50_0 .var "b", 0 0;
+v0x589c4d87fd10_0 .net "y", 0 0, L_0x589c4d87fdb0;  1 drivers
+    .scope S_0x589c4d86f5f0;
+T_0 ;
+    %vpi_call 2 7 "$monitor", "a = %b b =%b :: y=%b", v0x589c4d86f780_0, v0x589c4d87fc50_0, v0x589c4d87fd10_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x589c4d86f780_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x589c4d87fc50_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x589c4d86f780_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x589c4d87fc50_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x589c4d86f780_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x589c4d87fc50_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x589c4d86f780_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x589c4d87fc50_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
