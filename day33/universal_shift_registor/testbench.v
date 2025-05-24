@@ -21,18 +21,19 @@ universal_shift_registor dut(   clk,
 				q);
 
 initial begin
-$monitor("time=%0t rst = %b control = %b si left = %b  si right = %b temp = %b ::  q=%b ",$time, rst,control, si_left,si_right,dut.temp,q);
+$monitor("time=%4t | rst = %2b control = %2b | si left = %2b  | si right = %2b | temp = %2b ::  q=%2b ",$time, rst,control, si_left,si_right,dut.temp,q);
 clk=0;
 rst=1;
 control=2'b00;
 data_in=4'b1010;
 si_left=0;
 si_right=1;
+
 #12 rst=0;
 
 control=2'b11 ;
 #10; control=2'b01 ; si_right=1;
-#10 ; control=2'b10 ; si_left=0;
+#10 ; control=2'b10 ; si_left=1;
 #20 $finish;
 end
 always #5 clk=~clk;
