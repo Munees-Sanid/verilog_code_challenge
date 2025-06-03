@@ -1,0 +1,42 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5cf00d8fe4a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x5cf00d8d7490 .scope module, "test" "test" 3 1;
+ .timescale 0 0;
+o0x7d7ff12fd018 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0x5cf00d8d7620_0 .net "A", 0 3, o0x7d7ff12fd018;  0 drivers
+v0x5cf00d925070_0 .var "B", 0 3;
+o0x7d7ff12fd078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5cf00d925150_0 .net "a", 0 0, o0x7d7ff12fd078;  0 drivers
+v0x5cf00d9251f0_0 .var "b", 0 0;
+v0x5cf00d9252b0_0 .var/i "c", 31 0;
+v0x5cf00d9253e0_0 .var/real "d", 0 0;
+v0x5cf00d9254a0_0 .var "e", 63 0;
+v0x5cf00d925580_0 .var/real "f", 0 0;
+    .scope S_0x5cf00d8d7490;
+T_0 ;
+    %vpi_call/w 3 12 "$display", "The default value of wire is = %0d,default size of wire is = %0d", v0x5cf00d925150_0, 32'b00000000000000000000000000000001 {0 0 0};
+    %vpi_call/w 3 13 "$display", "The default value of reg is = %0d,default size of reg is = %0d", v0x5cf00d9251f0_0, 32'b00000000000000000000000000000001 {0 0 0};
+    %vpi_call/w 3 14 "$display", "The default value of integer is = %0d,default size of integer is = %0d", v0x5cf00d9252b0_0, 32'b00000000000000000000000000100000 {0 0 0};
+    %vpi_call/w 3 15 "$display", "The default value of real is = %0f", v0x5cf00d9253e0_0 {0 0 0};
+    %vpi_call/w 3 16 "$display", "The default value of time is = %0d,The defalut size of time is = %0d", v0x5cf00d9254a0_0, 32'b00000000000000000000000001000000 {0 0 0};
+    %vpi_call/w 3 17 "$display", "The default value of realtime is = %0f", v0x5cf00d925580_0 {0 0 0};
+    %vpi_call/w 3 18 "$display", "The default value of wire is = %0d,default size of wire is = %0d", v0x5cf00d8d7620_0, 32'b00000000000000000000000000000100 {0 0 0};
+    %vpi_call/w 3 19 "$display", "The default value of reg is = %0d,default size of reg is = %0d", v0x5cf00d925070_0, 32'b00000000000000000000000000000100 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "testbench.v";
