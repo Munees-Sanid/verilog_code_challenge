@@ -1,0 +1,33 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/munees-sanid/github/verilog_code/day40/sample_program
+vtest
+!s110 1749129192
+!i10b 1
+!s100 Ta^UjOaDD3442C<Z92NRF0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IibZbob^W73eQhb7]3=V1?0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1749039064
+8testbench.v
+Ftestbench.v
+!i122 1
+L0 2 11
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1749129192.000000
+!s107 testbench.v|
+!s90 testbench.v|
+!i113 1
+tCvgOpt 0
