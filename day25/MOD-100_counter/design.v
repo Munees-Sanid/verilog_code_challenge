@@ -8,7 +8,7 @@ always @ (posedge clk)begin
 	if(rst)
 		temp<=0;
 	else if(temp==99)
-		temp<=0;
+		temp=0;
 	else
 		temp<=temp+1;
 	end

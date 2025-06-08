@@ -1,0 +1,14 @@
+# vsim -c test -do "run -all; quit" 
+# Start time: 00:14:12 on Jun 07,2025
+# Loading work.test
+# run -all
+# the value is written is heere
+#   1
+#   1
+#   1
+#   1
+# 4.2
+# end
+#  quit
+# End time: 00:14:12 on Jun 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
