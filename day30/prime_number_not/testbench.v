@@ -21,14 +21,15 @@ module tb;
   integer is_prime;
 
   initial begin
-    num = 12;
+    num = 13;
     is_prime = 1;
 
-    for (i = 2; i <= num - 1; i = i + 1) begin
+    for (i = 2; i <= num /2; i = i + 1) begin
       if ((num % i) == 0) begin
         is_prime = 0;
       end
     end
+
 
     if (is_prime == 1)
       $display("Prime number");
