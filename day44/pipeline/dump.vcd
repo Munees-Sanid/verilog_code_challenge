@@ -1,0 +1,286 @@
+$date
+	Fri Jun 20 16:08:24 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$scope module uut $end
+$var wire 1 ! clk $end
+$var wire 1 " rst $end
+$var wire 8 # reg_data2 [7:0] $end
+$var wire 8 $ reg_data1 [7:0] $end
+$var wire 8 % instr [7:0] $end
+$var wire 8 & alu_result [7:0] $end
+$var reg 2 ' EX_MEM_dest [1:0] $end
+$var reg 8 ( EX_MEM_result [7:0] $end
+$var reg 8 ) ID_EX_A [7:0] $end
+$var reg 8 * ID_EX_B [7:0] $end
+$var reg 2 + ID_EX_dest [1:0] $end
+$var reg 4 , ID_EX_opcode [3:0] $end
+$var reg 8 - IF_ID [7:0] $end
+$var reg 8 . MEM_WB_data [7:0] $end
+$var reg 2 / MEM_WB_dest [1:0] $end
+$var reg 1 0 MEM_WB_write_en $end
+$var reg 4 1 pc [3:0] $end
+$scope module imem $end
+$var wire 4 2 pc [3:0] $end
+$var reg 8 3 instruction [7:0] $end
+$upscope $end
+$scope module my_alu $end
+$var wire 8 4 a [7:0] $end
+$var wire 8 5 b [7:0] $end
+$var wire 4 6 opcode [3:0] $end
+$var reg 8 7 result [7:0] $end
+$upscope $end
+$scope module rf $end
+$var wire 1 ! clk $end
+$var wire 2 8 read_reg1 [1:0] $end
+$var wire 2 9 read_reg2 [1:0] $end
+$var wire 8 : write_data [7:0] $end
+$var wire 1 0 write_enable $end
+$var wire 2 ; write_reg [1:0] $end
+$var reg 8 < read_data1 [7:0] $end
+$var reg 8 = read_data2 [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx =
+bx <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b10001 3
+b0 2
+b0 1
+00
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b10001 %
+bx $
+bx #
+1"
+0!
+$end
+#5000
+1!
+#10000
+0!
+0"
+#15000
+b1 9
+b10010 %
+b10010 3
+10
+bx *
+bx 5
+bx )
+bx 4
+b10001 -
+b1 1
+b1 2
+1!
+#20000
+0!
+#25000
+b0 $
+b0 <
+bx &
+bx 7
+b10 9
+b10100 %
+b10100 3
+b1 +
+b1 ,
+b1 6
+b10010 -
+b10 1
+b10 2
+1!
+#30000
+0!
+#35000
+b0 #
+b0 =
+bx $
+bx <
+b1 8
+b0 9
+b11001 %
+b11001 3
+b1 '
+bx (
+b10 +
+b0 )
+b0 4
+b10100 -
+b11 1
+b11 2
+1!
+#40000
+0!
+#45000
+bx #
+bx =
+b10 8
+b1 9
+b0 %
+b0 3
+b1 /
+b1 ;
+bx .
+bx :
+b10 '
+b0 +
+b0 *
+b0 5
+bx )
+bx 4
+b11001 -
+b100 1
+b100 2
+1!
+#50000
+0!
+#55000
+b0 #
+b0 =
+b0 $
+b0 <
+b0 8
+b0 9
+bx %
+bx 3
+b10 /
+b10 ;
+b0 '
+b1 +
+bx *
+bx 5
+b0 -
+b101 1
+b101 2
+1!
+#60000
+0!
+#65000
+bx #
+bx =
+bx $
+bx <
+b0 &
+b0 7
+bx 8
+bx 9
+b0 /
+b0 ;
+b1 '
+b0 +
+b0 *
+b0 5
+b0 )
+b0 4
+b0 ,
+b0 6
+bx -
+b110 1
+b110 2
+1!
+#70000
+0!
+#75000
+b1 /
+b1 ;
+b0 '
+b0 (
+bx +
+bx *
+bx 5
+bx )
+bx 4
+bx ,
+bx 6
+b111 1
+b111 2
+1!
+#80000
+0!
+#85000
+b0 /
+b0 ;
+b0 .
+b0 :
+bx '
+b1000 1
+b1000 2
+1!
+#90000
+0!
+#95000
+bx /
+bx ;
+b1001 1
+b1001 2
+1!
+#100000
+0!
+#105000
+b1010 1
+b1010 2
+1!
+#110000
+0!
+#115000
+b1011 1
+b1011 2
+1!
+#120000
+0!
+#125000
+b1100 1
+b1100 2
+1!
+#130000
+0!
+#135000
+b1101 1
+b1101 2
+1!
+#140000
+0!
+#145000
+b1110 1
+b1110 2
+1!
+#150000
+0!
+#155000
+b1111 1
+b1111 2
+1!
+#160000
+0!
