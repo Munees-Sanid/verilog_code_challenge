@@ -1,0 +1,24 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x60ebf85fd590 .scope module, "tb" "tb" 2 1;
+ .timescale 0 0;
+v0x60ebf85ff400_0 .var "a", 7 0;
+    .scope S_0x60ebf85fd590;
+T_0 ;
+    %pushi/vec4 249, 0, 8;
+    %store/vec4 v0x60ebf85ff400_0, 0, 8;
+    %vpi_call 2 5 "$display", "a = %0d", v0x60ebf85ff400_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "testbench.v";

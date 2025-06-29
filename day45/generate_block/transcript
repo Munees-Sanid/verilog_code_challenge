@@ -1,0 +1,8 @@
+# vsim -c tb -do "run -all; quit" 
+# Start time: 18:33:13 on Jun 23,2025
+# ** Error: (vsim-3170) Could not find 'tb'.
+#         Searched libraries:
+#             /home/munees-sanid/github/verilog_code/day45/generate_block/work
+# Error loading design
+# End time: 18:33:13 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
