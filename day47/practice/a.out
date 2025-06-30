@@ -1,0 +1,30 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5ae89888e510 .scope module, "tb" "tb" 2 59;
+ .timescale 0 0;
+L_0x772d6a283018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_0x772d6a283060 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x5ae8988d5c20 .functor AND 1, L_0x772d6a283018, L_0x772d6a283060, C4<1>, C4<1>;
+L_0x5ae8988d5d60 .functor OR 1, L_0x772d6a283018, L_0x772d6a283060, C4<0>, C4<0>;
+RS_0x772d6a2cc018 .resolv trior, L_0x5ae8988d5c20, L_0x5ae8988d5d60;
+v0x5ae89888e6a0_0 .net8 "a", 0 0, RS_0x772d6a2cc018;  2 drivers
+v0x5ae8988d5a90_0 .net "b", 0 0, L_0x772d6a283018;  1 drivers
+v0x5ae8988d5b50_0 .net "c", 0 0, L_0x772d6a283060;  1 drivers
+    .scope S_0x5ae89888e510;
+T_0 ;
+    %delay 1, 0;
+    %vpi_call 2 64 "$display", "%b", v0x5ae89888e6a0_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
