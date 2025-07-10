@@ -1,0 +1,89 @@
+$date
+	Thu Jul 10 18:35:08 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_dff_asyn_or_syn $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # ctrl $end
+$var reg 1 $ d $end
+$var reg 1 % rst $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # ctrl $end
+$var wire 1 $ d $end
+$var wire 1 % rst $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+1$
+0#
+0"
+x!
+$end
+#3000
+0!
+1%
+#5000
+1"
+#7000
+0%
+#10000
+0"
+#15000
+1!
+1"
+#19000
+0!
+1%
+#20000
+0"
+#25000
+1!
+1"
+0%
+#30000
+0"
+#35000
+1"
+#40000
+0"
+#45000
+1"
+1#
+#50000
+0"
+#55000
+1"
+#56000
+1%
+#60000
+0"
+#65000
+0!
+1"
+#69000
+0%
+#70000
+0"
+#75000
+1!
+1"
+#80000
+0"
+#85000
+1"
+#90000
+0"
