@@ -1,0 +1,54 @@
+$date
+	Fri Jul 11 17:37:35 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var reg 1 ! clk $end
+$var integer 32 " neg [31:0] $end
+$var integer 32 # pos [31:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 #
+b0 "
+0!
+$end
+#5
+b1 #
+1!
+#10
+b1 "
+0!
+#15
+b10 #
+1!
+#20
+b10 "
+0!
+#25
+b11 #
+1!
+#30
+b11 "
+0!
+#35
+b100 #
+1!
+#40
+b100 "
+0!
+#45
+b101 #
+1!
+#50
+b101 "
+0!
